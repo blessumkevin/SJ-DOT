@@ -14,10 +14,6 @@
                 <behavior>Edit</behavior>
                 <field>Type__c</field>
             </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>Limited_Edition__c</field>
-            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
