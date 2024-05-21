@@ -22,6 +22,10 @@
                 <behavior>Edit</behavior>
                 <field>Custom_Build__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Size__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
