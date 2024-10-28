@@ -1,6 +1,6 @@
 @isTest
 public class MathUtilityTest {
-    // Test method to check the square of a number Oct 17
+    // Test method to check the square of a number Oct 28
     @isTest
     static void testSquare() {
         // Test with a positive number
