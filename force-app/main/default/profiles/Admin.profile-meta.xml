@@ -44,6 +44,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Professor__c.Active__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Room__c.Room_Number__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -88,6 +93,9 @@
     </layoutAssignments>
     <layoutAssignments>
         <layout>Hawk_Ridge__c-Hawk Ridge Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Professor__c-Professor Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
         <layout>Room__c-Room Layout</layout>
@@ -150,6 +158,15 @@
         <allowRead>true</allowRead>
         <modifyAllRecords>true</modifyAllRecords>
         <object>Hawk_Ridge__c</object>
+        <viewAllRecords>true</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <allowCreate>true</allowCreate>
+        <allowDelete>true</allowDelete>
+        <allowEdit>true</allowEdit>
+        <allowRead>true</allowRead>
+        <modifyAllRecords>true</modifyAllRecords>
+        <object>Professor__c</object>
         <viewAllRecords>true</viewAllRecords>
     </objectPermissions>
     <objectPermissions>
