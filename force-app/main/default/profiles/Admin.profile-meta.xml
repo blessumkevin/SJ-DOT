@@ -49,6 +49,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Implementation__c.Ideal_Start_Date__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Professor__c.Active__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -101,6 +106,9 @@
     </layoutAssignments>
     <layoutAssignments>
         <layout>Hawk_Ridge__c-Hawk Ridge Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Implementation__c-Implementation Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
         <layout>Professor__c-Professor Layout</layout>
@@ -175,6 +183,15 @@
         <allowRead>true</allowRead>
         <modifyAllRecords>true</modifyAllRecords>
         <object>Hawk_Ridge__c</object>
+        <viewAllRecords>true</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <allowCreate>true</allowCreate>
+        <allowDelete>true</allowDelete>
+        <allowEdit>true</allowEdit>
+        <allowRead>true</allowRead>
+        <modifyAllRecords>true</modifyAllRecords>
+        <object>Implementation__c</object>
         <viewAllRecords>true</viewAllRecords>
     </objectPermissions>
     <objectPermissions>
