@@ -59,6 +59,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Insurance__c.Whole_Life__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Professor__c.Active__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -117,6 +122,9 @@
     </layoutAssignments>
     <layoutAssignments>
         <layout>Implementation__c-Implementation Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Insurance__c-Insurance Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
         <layout>Professor__c-Professor Layout</layout>
@@ -209,6 +217,15 @@
         <allowRead>true</allowRead>
         <modifyAllRecords>true</modifyAllRecords>
         <object>Implementation__c</object>
+        <viewAllRecords>true</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <allowCreate>true</allowCreate>
+        <allowDelete>true</allowDelete>
+        <allowEdit>true</allowEdit>
+        <allowRead>true</allowRead>
+        <modifyAllRecords>true</modifyAllRecords>
+        <object>Insurance__c</object>
         <viewAllRecords>true</viewAllRecords>
     </objectPermissions>
     <objectPermissions>
