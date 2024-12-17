@@ -49,6 +49,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Funds__c.Settled__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Hawk_Ridge__c.Software__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -116,6 +121,9 @@
     </layoutAssignments>
     <layoutAssignments>
         <layout>Cruise_Package__c-Cruise Package Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Funds__c-Funds Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
         <layout>Hawk_Ridge__c-Hawk Ridge Layout</layout>
@@ -199,6 +207,15 @@
         <allowRead>true</allowRead>
         <modifyAllRecords>true</modifyAllRecords>
         <object>Cruise_Package__c</object>
+        <viewAllRecords>true</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <allowCreate>true</allowCreate>
+        <allowDelete>true</allowDelete>
+        <allowEdit>true</allowEdit>
+        <allowRead>true</allowRead>
+        <modifyAllRecords>true</modifyAllRecords>
+        <object>Funds__c</object>
         <viewAllRecords>true</viewAllRecords>
     </objectPermissions>
     <objectPermissions>
