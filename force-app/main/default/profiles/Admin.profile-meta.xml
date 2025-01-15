@@ -54,6 +54,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Grill__c.Pellet__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Hawk_Ridge__c.Software__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -124,6 +129,9 @@
     </layoutAssignments>
     <layoutAssignments>
         <layout>Funds__c-Funds Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Grill__c-Grill Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
         <layout>Hawk_Ridge__c-Hawk Ridge Layout</layout>
@@ -216,6 +224,15 @@
         <allowRead>true</allowRead>
         <modifyAllRecords>true</modifyAllRecords>
         <object>Funds__c</object>
+        <viewAllRecords>true</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <allowCreate>true</allowCreate>
+        <allowDelete>true</allowDelete>
+        <allowEdit>true</allowEdit>
+        <allowRead>true</allowRead>
+        <modifyAllRecords>true</modifyAllRecords>
+        <object>Grill__c</object>
         <viewAllRecords>true</viewAllRecords>
     </objectPermissions>
     <objectPermissions>
@@ -989,6 +1006,10 @@
     <userPermissions>
         <enabled>true</enabled>
         <name>ViewClientSecret</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>ViewContentTaxonomy</name>
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
