@@ -1,5 +1,5 @@
 public class MathUtility {
-    // Method to calculate the square of a number - Dec 17th Changes
+    // Method to calculate the square of a number - Jan 14th Changes
     public static Integer square(Integer num) {
         return num * num;
     }
