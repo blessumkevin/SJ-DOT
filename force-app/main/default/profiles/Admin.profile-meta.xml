@@ -19,6 +19,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Grill__c.Pellet__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Insurance__c.Whole_Life__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -35,6 +40,9 @@
     </layoutAssignments>
     <layoutAssignments>
         <layout>Cruise_Package__c-Cruise Package Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Grill__c-Grill Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
         <layout>Insurance__c-Insurance Layout</layout>
@@ -73,6 +81,15 @@
         <allowRead>true</allowRead>
         <modifyAllRecords>true</modifyAllRecords>
         <object>Cruise_Package__c</object>
+        <viewAllRecords>true</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <allowCreate>true</allowCreate>
+        <allowDelete>true</allowDelete>
+        <allowEdit>true</allowEdit>
+        <allowRead>true</allowRead>
+        <modifyAllRecords>true</modifyAllRecords>
+        <object>Grill__c</object>
         <viewAllRecords>true</viewAllRecords>
     </objectPermissions>
     <objectPermissions>
@@ -765,6 +782,10 @@
     <userPermissions>
         <enabled>true</enabled>
         <name>ViewClientSecret</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>ViewContentTaxonomy</name>
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
