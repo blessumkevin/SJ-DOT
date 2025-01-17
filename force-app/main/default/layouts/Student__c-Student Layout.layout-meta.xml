@@ -14,6 +14,10 @@
                 <behavior>Edit</behavior>
                 <field>VIP__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Graduate__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
