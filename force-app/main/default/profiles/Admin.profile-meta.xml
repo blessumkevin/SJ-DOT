@@ -24,6 +24,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Professor__c.Active__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Student__c.VIP__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -38,6 +43,9 @@
     </layoutAssignments>
     <layoutAssignments>
         <layout>Insurance__c-Insurance Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Professor__c-Professor Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
         <layout>Student__c-Student Layout</layout>
@@ -82,6 +90,15 @@
         <allowRead>true</allowRead>
         <modifyAllRecords>true</modifyAllRecords>
         <object>Insurance__c</object>
+        <viewAllRecords>true</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <allowCreate>true</allowCreate>
+        <allowDelete>true</allowDelete>
+        <allowEdit>true</allowEdit>
+        <allowRead>true</allowRead>
+        <modifyAllRecords>true</modifyAllRecords>
+        <object>Professor__c</object>
         <viewAllRecords>true</viewAllRecords>
     </objectPermissions>
     <objectPermissions>
