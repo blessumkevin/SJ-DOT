@@ -24,6 +24,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Order.Start_Date__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Student__c.VIP__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -38,6 +43,9 @@
     </layoutAssignments>
     <layoutAssignments>
         <layout>Insurance__c-Insurance Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Order-Formato de pedidos</layout>
     </layoutAssignments>
     <layoutAssignments>
         <layout>Student__c-Student Layout</layout>
@@ -765,6 +773,10 @@
     <userPermissions>
         <enabled>true</enabled>
         <name>ViewClientSecret</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>ViewContentTaxonomy</name>
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
