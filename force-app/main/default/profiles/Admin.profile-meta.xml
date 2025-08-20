@@ -4,6 +4,11 @@
     <custom>false</custom>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Account.Credit_Check_Completed__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Account.Plumbing_Licensed__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -157,6 +162,10 @@
     <userPermissions>
         <enabled>true</enabled>
         <name>BulkMacrosAllowed</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>CanApproveUninstalledApps</name>
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
