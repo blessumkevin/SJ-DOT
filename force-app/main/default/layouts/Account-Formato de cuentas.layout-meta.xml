@@ -23,6 +23,10 @@
                 <behavior>Edit</behavior>
                 <field>Plumbing_Licensed__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Credit_Check_Completed__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
