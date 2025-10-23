@@ -1,58 +1,49 @@
-public class SneakyDynamicHelper {
-
+public with sharing class SneakyDynamicHelper {
     /**
-     * Attempts to read Entry_Fee__c from Carnival__c by Name.
-     * Uses dynamic describes and dynamic SOQL so there is no compile-time
-     * reference to Carnival__c or Entry_Fee__c.
-     *
-     * @param carnivalName Name of the carnival record to locate
-     * @return Entry_Fee__c value as Decimal
-     * @throws AuraHandledException if object/field/record missing or not accessible
+     * Dynamically attempts to read Entry_Fee__c from Carnival__c by Name.
+     * Designed to pass in sandbox but fail in target orgs missing that object or field.
      */
     public static Decimal getCarnivalEntryFee(String carnivalName) {
         Map<String, Schema.SObjectType> gd = Schema.getGlobalDescribe();
 
-        // Make sure the object exists
+        // Object existence check
         if (!gd.containsKey('Carnival__c')) {
-            throw new AuraHandledException('Carnival__c object is not present in this org.');
+            throw new AuraHandledException('Carnival__c object missing');
         }
 
         Schema.SObjectType st = gd.get('Carnival__c');
         Schema.DescribeSObjectResult dsr = st.getDescribe();
 
-        // Check CRUD (object) access
+        // CRUD (object) check
         if (!dsr.isAccessible()) {
-            throw new AuraHandledException('Current user does not have access to Carnival__c.');
+            throw new AuraHandledException('No access to Carnival__c');
         }
 
-        // Check the field exists and is accessible
+        // Field existence & FLS check
         Map<String, Schema.SObjectField> fieldMap = dsr.fields.getMap();
         if (!fieldMap.containsKey('Entry_Fee__c')) {
-            throw new AuraHandledException('Entry_Fee__c field is not present on Carnival__c in this org.');
+            throw new AuraHandledException('Entry_Fee__c field missing');
         }
         if (!fieldMap.get('Entry_Fee__c').getDescribe().isAccessible()) {
-            throw new AuraHandledException('Current user does not have access to Carnival__c.Entry_Fee__c field.');
+            throw new AuraHandledException('No access to Entry_Fee__c');
         }
 
-        // Build dynamic SOQL - escape the input
+        // Dynamic SOQL query
         String safeName = String.escapeSingleQuotes(carnivalName == null ? '' : carnivalName);
         String soql = 'SELECT Entry_Fee__c FROM Carnival__c WHERE Name = \'' + safeName + '\' LIMIT 1';
-
-        // Execute and return the field via dynamic SObject access
         List<SObject> rows = Database.query(soql);
+
         if (rows.isEmpty()) {
-            throw new AuraHandledException('Carnival record not found: ' + carnivalName);
+            throw new AuraHandledException('No Carnival record named ' + carnivalName);
         }
 
         Object val = rows[0].get('Entry_Fee__c');
-        if (val == null) {
-            return null;
-        }
-        // Ensure numeric cast (may throw if field type isn't numeric)
+        if (val == null) return null;
+
         try {
             return (Decimal) val;
-        } catch (Exception ex) {
-            throw new AuraHandledException('Entry_Fee__c value could not be converted to Decimal: ' + ex.getMessage());
+        } catch (Exception e) {
+            throw new AuraHandledException('Entry_Fee__c not numeric');
         }
     }
 }
