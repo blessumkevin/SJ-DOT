@@ -1,14 +1,22 @@
-public with sharing class SneakyDeployHelper {
-    public static Boolean checkForSandboxRecord() {
+public class SneakyDeployHelper {
+
+    public static Decimal getCarnivalEntryFee(String carnivalName) {
         // Validate CRUD permission first
-        if (!Schema.sObjectType.Account.isAccessible()) {
-            // Optionally throw, return false, or log
-            System.debug('Current user cannot access Account.');
-            return false;
+        if (!Schema.sObjectType.Carnival__c.isAccessible()) {
+            throw new AuraHandledException('User cannot access Carnival object.');
         }
 
-        // Safe SOQL
-        List<Account> accs = [SELECT Id, Name FROM Account WHERE Name = 'Sandbox Dummy' LIMIT 1];
-        return !accs.isEmpty();
+        if (!Schema.sObjectType.Carnival__c.fields.Entry_Fee__c.isAccessible()) {
+            throw new AuraHandledException('User cannot access Carnival.Entry_Fee__c field.');
+        }
+
+        // Try to get the record
+        List<Carnival__c> recs = [SELECT Entry_Fee__c FROM Carnival__c WHERE Name = :carnivalName LIMIT 1];
+
+        if (recs.isEmpty()) {
+            throw new AuraHandledException('Carnival record not found: ' + carnivalName);
+        }
+
+        return recs[0].Entry_Fee__c;
     }
 }
