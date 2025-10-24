@@ -3,9 +3,10 @@
     <apiVersion>62.0</apiVersion>
     <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
     <assignments>
+        <description>Adding another description</description>
         <name>Calculate_Value</name>
         <label>Calculate Value</label>
-        <locationX>176</locationX>
+        <locationX>182</locationX>
         <locationY>350</locationY>
         <assignmentItems>
             <assignToReference>varCalculatedValue</assignToReference>
@@ -19,9 +20,10 @@
         </connector>
     </assignments>
     <assignments>
+        <description>Adding description</description>
         <name>Set_User_Name</name>
         <label>Set User Name</label>
-        <locationX>176</locationX>
+        <locationX>182</locationX>
         <locationY>242</locationY>
         <assignmentItems>
             <assignToReference>varUserName</assignToReference>
@@ -37,7 +39,7 @@
     <decisions>
         <name>Check_Value</name>
         <label>Check Value</label>
-        <locationX>176</locationX>
+        <locationX>182</locationX>
         <locationY>458</locationY>
         <defaultConnector>
             <targetReference>Display_Low_Value_Screen</targetReference>
@@ -59,7 +61,9 @@
             <label>High Value</label>
         </rules>
     </decisions>
-    <description>A self-contained demo flow with various elements that doesn&apos;t modify any data</description>
+    <description>A self-contained demo flow with various elements that doesn&apos;t modify any data...</description>
+    <environments>Default</environments>
+    <interviewLabel>Demo Flow {!$Flow.CurrentDateTime}</interviewLabel>
     <label>Demo Flow</label>
     <processMetadataValues>
         <name>BuilderType</name>
@@ -77,7 +81,7 @@
     <recordLookups>
         <name>Get_Current_User_Info</name>
         <label>Get Current User Info</label>
-        <locationX>176</locationX>
+        <locationX>182</locationX>
         <locationY>134</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -144,7 +148,7 @@
         <showHeader>true</showHeader>
     </screens>
     <start>
-        <locationX>50</locationX>
+        <locationX>56</locationX>
         <locationY>0</locationY>
         <connector>
             <targetReference>Get_Current_User_Info</targetReference>
