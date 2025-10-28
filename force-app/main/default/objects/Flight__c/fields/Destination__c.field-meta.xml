@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Destination__c</fullName>
-    <description>Oct 21</description>
+    <description>Oct 28 changes</description>
     <externalId>false</externalId>
     <label>Destination</label>
     <length>255</length>
