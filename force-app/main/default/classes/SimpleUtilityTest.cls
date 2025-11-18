@@ -3,7 +3,7 @@ private class SimpleUtilityTest {
     
     @IsTest
     static void testReverseString() {
-        // Test normal string
+        // Testing normal string
         String input = 'Hello World';
         String result = SimpleUtility.reverseString(input);
         System.assertEquals('dlroW olleH', result, 'String should be reversed correctly');
@@ -12,7 +12,7 @@ private class SimpleUtilityTest {
         result = SimpleUtility.reverseString(null);
         System.assertEquals(null, result, 'Null input should return null');
         
-        // Test empty string
+        // Test empty string.
         result = SimpleUtility.reverseString('');
         System.assertEquals('', result, 'Empty string should return empty string');
     }
