@@ -1,7 +1,8 @@
 public class SimpleUtility {
+ // This class contains simple string utility methods
     
     /**
-     * Simple method to reverse a string
+     * Simple method to reverse a string.
      * @param input The string to reverse
      * @return The reversed string
      */
